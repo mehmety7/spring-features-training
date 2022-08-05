@@ -1,0 +1,10 @@
+#second, minute, hour, day of month, month, day(s) of week
+#(*) means match any
+#*/X means "every X"
+#1,5 one and five, 1-5 one to five
+#<minute> <hour> <day-of-month> <month> <day-of-week> <command>
+cron-book: "* */1 * * * *"
+zone: Europe/Istanbul
+
+server:
+  port: 0
