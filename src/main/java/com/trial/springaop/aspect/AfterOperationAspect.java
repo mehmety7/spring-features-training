@@ -1,34 +1,34 @@
 package com.trial.springaop.aspect;
 
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.AfterThrowing;
-import org.aspectj.lang.annotation.Aspect;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.aspectj.lang.annotation.*;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @Aspect
+@Slf4j
 public class AfterOperationAspect {
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-    @After(value = "execution(* com.trial.springaop.service.*.*(..))")
-    public void after(JoinPoint joinPoint) {
-        logger.info("{} operation is executed", joinPoint);
+    @Before(value = "execution(* com.trial.springaop.service.*.*(..))")
+    public void before(JoinPoint joinPoint) {
+        log.info("{} operation will execute", joinPoint.getStaticPart().toString().replace("execution(", ""));
     }
 
     @AfterReturning(value = "execution(* com.trial.springaop.service.*.*(..))",
             returning = "result")
     public void afterReturning(JoinPoint joinPoint, Object result) {
-        logger.info("{} operation returned with value {}", joinPoint, result);
+        log.info("{} operation returned with value {}", joinPoint.getStaticPart().toString().replace("execution(", ""), result);
+    }
+
+    @After(value = "execution(* com.trial.springaop.service.*.*(..))")
+    public void after(JoinPoint joinPoint) {
+        log.info("{} operation is executed", joinPoint.getStaticPart().toString().replace("execution(", ""));
     }
 
     @AfterThrowing(value = "execution(* com.trial.springaop.service.*.*(..))",
             throwing = "ex")
     public void afterThrowing(JoinPoint joinPoint, Exception ex) {
-        logger.info("{} operation thrown {}", joinPoint, ex);
+        log.info("{} operation thrown {}", joinPoint.getStaticPart().toString().replace("execution(", ""), ex);
     }
 }
