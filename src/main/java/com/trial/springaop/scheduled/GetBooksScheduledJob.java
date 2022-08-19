@@ -4,7 +4,6 @@ import com.trial.springaop.service.BookService;
 import com.trial.springaop.util.RandomNumberCreator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -15,11 +14,11 @@ import java.util.Date;
 public class GetBooksScheduledJob {
 
     private final Integer FIRST_INDEX_OF_BOOK_ARRAY = 1;
-    private final Integer LAST_INDEX_OF_BOOK_ARRAY = 20;
+    private final Integer LAST_INDEX_OF_BOOK_ARRAY = 8;
 
     private final BookService bookService;
 
-    @Scheduled(cron = "${cron-book}", zone = "${zone}")
+    // @Scheduled(cron = "${cron-book}", zone = "${zone}")
     public void getRandomBookEvery_10_Second() {
         log.info("cron-book#getRandomBookEvery_10_Second start: " + new Date());
         try {
@@ -31,7 +30,7 @@ public class GetBooksScheduledJob {
         log.info("cron-book#getRandomBookEvery_10_Second stop: " + new Date());
     }
 
-    @Scheduled(fixedRate = 2000)
+    // @Scheduled(fixedRate = 2000)
     public void getRandomBookEvery_2_Second() {
         log.info("cron-book#getRandomBookEvery_2_Second start: " + new Date());
         try {
