@@ -6,15 +6,33 @@
 
 spring:
   profiles:
-    active: test2
+    active: test1
 
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
 
-cron-book: "* */1 * * * *"
-zone: Europe/Istanbul
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  devtools:
+    add-properties: false
+
+cron:
+  zone: Europe/Istanbul
+  book:
+    rate: 5000
+    time: "* */1 * * * *"
+    enabled: false
 
 server:
   servlet:
     context-path: /api
+
+logging:
+  level:
+    web: debug
+    sql: error
+    root: info
