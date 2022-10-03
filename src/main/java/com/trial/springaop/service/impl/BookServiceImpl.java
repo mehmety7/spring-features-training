@@ -21,4 +21,14 @@ public class BookServiceImpl implements BookService {
         return Optional.of(bookRepository.getBookById(id));
     }
 
+    @Override
+    public boolean createBook(Book book) {
+        try {
+            bookRepository.save(book);
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+    }
+
 }

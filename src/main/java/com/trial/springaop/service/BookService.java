@@ -8,4 +8,6 @@ public interface BookService {
 
     Optional<Book> getBook(Long id);
 
+    boolean createBook(Book book);
+
 }

@@ -5,9 +5,7 @@ import com.trial.springaop.model.entity.Book;
 import com.trial.springaop.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -20,4 +18,8 @@ public class BookController {
         return ResponseEntity.ok(bookService.getBook(id).orElse(Book.builder().build()));
     }
 
+    @PostMapping(value = BookControllerEndpoint.BASE_URI)
+    public ResponseEntity<Boolean> createBook(@RequestBody Book book){
+        return ResponseEntity.ok(bookService.createBook(book));
+    }
 }
