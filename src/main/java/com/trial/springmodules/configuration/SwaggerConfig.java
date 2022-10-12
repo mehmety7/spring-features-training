@@ -1,4 +1,4 @@
-package com.trial.springaop.configuration;
+package com.trial.springmodules.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

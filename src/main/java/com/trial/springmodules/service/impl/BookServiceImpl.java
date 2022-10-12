@@ -1,8 +1,8 @@
-package com.trial.springaop.service.impl;
+package com.trial.springmodules.service.impl;
 
-import com.trial.springaop.model.entity.Book;
-import com.trial.springaop.repository.BookRepository;
-import com.trial.springaop.service.BookService;
+import com.trial.springmodules.model.entity.Book;
+import com.trial.springmodules.repository.BookRepository;
+import com.trial.springmodules.service.BookService;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

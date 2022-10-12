@@ -1,4 +1,4 @@
-package com.trial.springaop.util;
+package com.trial.springmodules.util;
 
 import java.util.Random;
 

@@ -1,8 +1,8 @@
-package com.trial.springaop.controller;
+package com.trial.springmodules.controller;
 
-import com.trial.springaop.controller.endpoint.BookControllerEndpoint;
-import com.trial.springaop.model.entity.Book;
-import com.trial.springaop.service.BookService;
+import com.trial.springmodules.controller.endpoint.BookControllerEndpoint;
+import com.trial.springmodules.model.entity.Book;
+import com.trial.springmodules.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

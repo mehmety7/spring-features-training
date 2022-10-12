@@ -1,7 +1,7 @@
-package com.trial.springaop.scheduled;
+package com.trial.springmodules.scheduled;
 
-import com.trial.springaop.service.BookService;
-import com.trial.springaop.util.RandomNumberCreator;
+import com.trial.springmodules.service.BookService;
+import com.trial.springmodules.util.RandomNumberCreator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.env.Environment;

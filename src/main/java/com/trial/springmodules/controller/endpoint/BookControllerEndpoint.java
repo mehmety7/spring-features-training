@@ -1,4 +1,4 @@
-package com.trial.springaop.controller.endpoint;
+package com.trial.springmodules.controller.endpoint;
 
 public final class BookControllerEndpoint {
 

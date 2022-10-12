@@ -1,6 +1,6 @@
-package com.trial.springaop.scheduled;
+package com.trial.springmodules.scheduled;
 
-import com.trial.springaop.service.BookService;
+import com.trial.springmodules.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

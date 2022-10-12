@@ -1,4 +1,4 @@
-package com.trial.springaop.model.dto;
+package com.trial.springmodules.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;

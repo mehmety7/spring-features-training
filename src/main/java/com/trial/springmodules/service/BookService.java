@@ -1,6 +1,6 @@
-package com.trial.springaop.service;
+package com.trial.springmodules.service;
 
-import com.trial.springaop.model.entity.Book;
+import com.trial.springmodules.model.entity.Book;
 
 import java.util.Optional;
 

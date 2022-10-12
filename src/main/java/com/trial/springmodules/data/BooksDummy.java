@@ -1,6 +1,6 @@
-package com.trial.springaop.data;
+package com.trial.springmodules.data;
 
-import com.trial.springaop.model.entity.Book;
+import com.trial.springmodules.model.entity.Book;
 
 import java.util.ArrayList;
 import java.util.List;

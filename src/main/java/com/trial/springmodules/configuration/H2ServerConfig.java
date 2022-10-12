@@ -1,4 +1,4 @@
-package com.trial.springaop.configuration;
+package com.trial.springmodules.configuration;
 
 import org.h2.tools.Server;
 import org.springframework.context.annotation.Bean;

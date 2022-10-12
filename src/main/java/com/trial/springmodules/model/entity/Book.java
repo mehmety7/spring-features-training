@@ -1,4 +1,4 @@
-package com.trial.springaop.model.entity;
+package com.trial.springmodules.model.entity;
 
 import lombok.*;
 import org.hibernate.Hibernate;
